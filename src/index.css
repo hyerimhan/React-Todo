@@ -4,6 +4,7 @@
   --color-grey: #d1d1d1;
   --color-text: #22243b;
   --color-accent: #f16e03;
+  --color-scrollbar: #aaa7a7;
 }
 
 body {
@@ -19,11 +20,12 @@ body {
   justify-content: center;
   align-items: center;
   font-size: 1.2rem;
-  background: rgb(157, 154, 222);
+  accent-color: var(--color-accent);
+  background: rgb(27, 25, 91);
   background: linear-gradient(
     90deg,
-    rgba(157, 154, 222, 1) 17%,
-    rgba(129, 129, 164, 1) 77%
+    rgba(27, 25, 91, 1) 17%,
+    rgba(15, 15, 66, 1) 85%
   );
 }
 
@@ -56,4 +58,20 @@ ul {
 button {
   outline: none;
   border: none;
+}
+
+::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--color-bg-dark);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-scrollbar);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--color-accent);
 }
